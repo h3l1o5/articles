@@ -1,7 +1,7 @@
 ---
 title: "為 Agent 打造 CLI"
 date: 2026-03-25
-categories: [翻譯]
+categories: [DevTools]
 tags: [cli, agent, 開發工具]
 image:
   path: /assets/img/posts/2026-03-25-building-clis-for-agents/banner.jpg
