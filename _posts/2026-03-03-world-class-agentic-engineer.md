@@ -3,6 +3,9 @@ title: "如何成為世界級的 Agentic 工程師"
 date: 2026-03-03
 categories: [AI]
 tags: [agentic-engineering, claude, codex, cli, prompt-engineering]
+image:
+  path: /assets/img/posts/2026-03-03-world-class-agentic-engineer/banner.jpg
+  alt: "How To Be A World-Class Agentic Engineer"
 ---
 
 > 原文：[How To Be A World-Class Agentic Engineer](https://x.com/systematicls/status/2028814227004395561) by **sysls** (@systematicls)
