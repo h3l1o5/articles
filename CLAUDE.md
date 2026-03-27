@@ -19,6 +19,8 @@ When the source is a URL, use `browser-use` (with `--profile "Default" --headed`
 
 ### Front matter convention
 
+The `date` field and filename use the date we create the article (UTC+8), not the original publication date — so new articles always sort to the top.
+
 ```yaml
 ---
 title: "中文翻譯標題"
