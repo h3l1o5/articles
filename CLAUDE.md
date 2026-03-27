@@ -38,6 +38,11 @@ Immediately after front matter, add the source attribution:
 ---
 ```
 
+### Translation style
+
+- Translate to Traditional Chinese, but keep technical terms in English (e.g., Claude Code, CLAUDE.md, hooks, skills, worktree, PR)
+- Download all images from the source article — do not link to external URLs
+
 ### Images
 
 Store in `/assets/img/posts/YYYY-MM-DD-slug/`. In Markdown, use paths **without** the baseurl — Chirpy adds `/articles` automatically:
@@ -45,3 +50,11 @@ Store in `/assets/img/posts/YYYY-MM-DD-slug/`. In Markdown, use paths **without*
 ```markdown
 ![alt](/assets/img/posts/YYYY-MM-DD-slug/image.jpg)
 ```
+
+### Categories and tags
+
+Use meaningful topic categories (e.g., `AI`, `DevOps`). Do not use categories like "翻譯" — every article in this project is a translation by definition.
+
+### After completion
+
+Commit with message format `Add article: <English title>` and push immediately. Do not start the dev server unless explicitly asked.
