@@ -15,7 +15,7 @@ image:
 
 要成為 Claude Architect 並開發 production-grade 應用，你需要理解 Claude Code、Claude Agent SDK、Claude API 和 Model Context Protocols。這篇文章會幫你學會一切，而且它是基於以下這個考試：
 
-![Become a Claude Certified Architect 考試報名頁面](/articles/assets/img/posts/2026-03-15-claude-architect-full-course/claude-architect-exam.jpg)
+![Become a Claude Certified Architect 考試報名頁面](/assets/img/posts/2026-03-15-claude-architect-full-course/claude-architect-exam.jpg)
 
 不過，正如你清楚看到的，要拿到這張「認證」你需要是 Claude partner，否則你沒辦法參加考試。
 

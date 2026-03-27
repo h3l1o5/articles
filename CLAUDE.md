@@ -40,8 +40,8 @@ Immediately after front matter, add the source attribution:
 
 ### Images
 
-Store in `/assets/img/posts/YYYY-MM-DD-slug/`. When referencing images inside Markdown, prefix with `/articles` (the site's baseurl):
+Store in `/assets/img/posts/YYYY-MM-DD-slug/`. In Markdown, use paths **without** the baseurl — Chirpy adds `/articles` automatically:
 
 ```markdown
-![alt](/articles/assets/img/posts/YYYY-MM-DD-slug/image.jpg)
+![alt](/assets/img/posts/YYYY-MM-DD-slug/image.jpg)
 ```
