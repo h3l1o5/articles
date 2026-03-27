@@ -15,6 +15,8 @@ Jekyll blog using the Chirpy theme, published at `https://h3l1o5.github.io/artic
 
 Articles are never written from scratch. The workflow is: source article → translate to Traditional Chinese → create `_posts/YYYY-MM-DD-slug.md`.
 
+When the source is a URL, use `browser-use` (with `--profile "Default" --headed`) to fetch content and images.
+
 ### Front matter convention
 
 ```yaml
@@ -58,3 +60,5 @@ Use meaningful topic categories (e.g., `AI`, `DevOps`). Do not use categories li
 ### After completion
 
 Commit with message format `Add article: <English title>` and push immediately. Do not start the dev server unless explicitly asked.
+
+After pushing, poll CI status every 1 minute (`gh run list --repo h3l1o5/articles --limit 1`) until the run completes. Report the result to the user.
