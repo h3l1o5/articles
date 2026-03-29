@@ -15,7 +15,9 @@ Jekyll blog using the Chirpy theme, published at `https://h3l1o5.github.io/artic
 
 Articles are never written from scratch. The workflow is: source article → translate to Traditional Chinese → create `_posts/YYYY-MM-DD-slug.md`.
 
-When the source is a URL, use `browser-use` (with `--profile "Default" --headed`) to fetch content and images.
+When the source is a URL, use `browser-use` (with `--profile "Default"`) to fetch content and images. Use `--headed` only when explicitly asked.
+
+**browser-use session gotcha**: Open the browser once with your chosen flags. After that, run all subsequent commands *without* those flags — the daemon reuses the existing session. Re-adding the flags causes a "Session already running with different config" error. If that happens, run `browser-use close` first, then reopen.
 
 ### Front matter convention
 
