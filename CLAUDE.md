@@ -1,7 +1,3 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Overview
 
 Jekyll blog using the Chirpy theme, published at `https://h3l1o5.github.io/articles`. All articles are translated from external sources (X/Twitter posts, websites, or local files) into Traditional Chinese.
@@ -15,9 +11,23 @@ Jekyll blog using the Chirpy theme, published at `https://h3l1o5.github.io/artic
 
 Articles are never written from scratch. The workflow is: source article → translate to Traditional Chinese → create `_posts/YYYY-MM-DD-slug.md`.
 
-When the source is a URL, use `browser-use` (with `--profile "Default"`) to fetch content and images. Use `--headed` only when explicitly asked.
+When the source is a URL, use **Claude-in-Chrome** (MCP tools `mcp__claude-in-chrome__*`) to fetch content and images. Use `--headed` only when explicitly asked.
 
-**browser-use session gotcha**: Open the browser once with your chosen flags. After that, run all subsequent commands *without* those flags — the daemon reuses the existing session. Re-adding the flags causes a "Session already running with different config" error. If that happens, run `browser-use close` first, then reopen.
+**Claude-in-Chrome notes**: Always call `tabs_create_mcp` to create a new tab — never reuse existing tabs that may belong to other agents. When checking tabs context, verify no other agents are actively using the tab group before proceeding.
+
+### Source-specific fetching strategies
+
+- **X/Twitter posts**: Must use browser (browser-use or Claude-in-Chrome). `WebFetch` returns 402 errors for X URLs. For X Articles (long-form), navigate to the article focus mode URL (`/article/` path) and scroll through the entire article to find all lazy-loaded images.
+- **GitHub Gists**: Use `WebFetch` directly — no browser needed. More efficient and avoids interfering with other browser sessions.
+- **General websites**: Try `WebFetch` first; fall back to browser if it fails.
+
+### Image discovery
+
+Do NOT rely solely on JavaScript DOM queries to find images. X Articles use lazy loading and complex DOM structures. The reliable approach:
+1. Navigate to the article focus mode URL
+2. Take screenshots and scroll through the entire article
+3. Use JS to collect `pbs.twimg.com/media` image base URLs (strip query params to avoid cookie-related blocks)
+4. Download with `curl` using `?format=jpg&name=large` suffix
 
 ### Front matter convention
 
